@@ -1,0 +1,399 @@
+
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f8f5;
+    color: #203b2d;
+}
+
+/* NAVIGATION */
+.navbar {
+    height: 70px;
+    background: #ffffff;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e2ebe4;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #155c38;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.brand-icon {
+    background: #e6f3e9;
+    padding: 9px;
+    border-radius: 10px;
+}
+
+.online-status {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #397650;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #24a35a;
+    border-radius: 50%;
+}
+
+/* MAIN CONTAINER */
+.container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 35px 5%;
+}
+
+/* PAGE HEADER */
+.page-header {
+    margin-bottom: 25px;
+}
+
+.page-header h1 {
+    color: #155c38;
+    font-size: 30px;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.page-header p {
+    color: #718477;
+    font-size: 14px;
+}
+
+/* TWO COLUMN LAYOUT */
+.content-layout {
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr);
+    gap: 22px;
+    align-items: stretch;
+}
+
+/* LEFT SIDEBAR */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* CARDS */
+.search-card,
+.history-card,
+.map-section {
+    background: #ffffff;
+    border: 1px solid #e0eae2;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(20, 70, 40, 0.05);
+}
+
+.search-card,
+.history-card {
+    padding: 20px;
+}
+
+.search-card h2,
+.history-card h2,
+.map-header h2 {
+    font-size: 17px;
+    font-weight: bold;
+    color: #174e32;
+}
+
+.card-description {
+    color: #829287;
+    font-size: 12px;
+    margin-top: 6px;
+    margin-bottom: 20px;
+}
+
+/* SEARCH INPUT */
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #dce8df;
+    border-radius: 9px;
+    padding: 0 12px;
+    height: 45px;
+    transition: 0.2s;
+}
+
+.search-box:focus-within {
+    border-color: #258653;
+    box-shadow: 0 0 0 3px rgba(37, 134, 83, 0.10);
+}
+
+.search-icon {
+    color: #508466;
+    font-size: 22px;
+}
+
+.search-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    color: #284a35;
+    background: transparent;
+}
+
+.search-box input::placeholder {
+    color: #a0aea4;
+}
+
+/* SEARCH BUTTON */
+.search-button {
+    width: 100%;
+    height: 43px;
+    background: #197347;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.search-button:hover {
+    background: #105b35;
+}
+
+.search-button:active {
+    transform: scale(0.98);
+}
+
+/* STATUS MESSAGE */
+.status-message {
+    color: #819287;
+    font-size: 12px;
+    line-height: 1.5;
+    margin-top: 12px;
+}
+
+/* HISTORY */
+.history-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.clear-button {
+    border: none;
+    background: #edf6ef;
+    color: #197347;
+    padding: 7px 11px;
+    border-radius: 7px;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.clear-button:hover {
+    background: #dcefe1;
+}
+
+.history-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 280px;
+    overflow-y: auto;
+}
+
+.history-list li {
+    background: #f6faf7;
+    border: 1px solid #e7efe9;
+    border-radius: 8px;
+    padding: 11px;
+    font-size: 13px;
+    color: #355c43;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.history-list li:hover {
+    background: #eaf5ed;
+    border-color: #b9d8c1;
+}
+
+.history-list .empty-history {
+    color: #9aa99e;
+    font-size: 12px;
+    text-align: center;
+    cursor: default;
+}
+
+.history-list .empty-history:hover {
+    background: #f6faf7;
+    border-color: #e7efe9;
+}
+
+/* MAP SECTION */
+.map-section {
+    padding: 20px;
+    min-width: 0;
+}
+
+.map-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 17px;
+}
+
+.map-header p {
+    color: #829287;
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+.map-label {
+    color: #197347;
+    background: #eaf5ed;
+    padding: 7px 10px;
+    border-radius: 7px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* MAP */
+.map-wrapper {
+    width: 100%;
+    height: 550px;
+    border-radius: 11px;
+    overflow: hidden;
+    border: 1px solid #dce8df;
+    background: #edf4ef;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* MAP FOOTER */
+.map-footer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 13px;
+}
+
+.map-footer p {
+    color: #829287;
+    font-size: 12px;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #8a9a8e;
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+/* LEAFLET POPUP */
+.leaflet-popup-content-wrapper {
+    border-radius: 10px;
+}
+
+.leaflet-popup-content {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+    .content-layout {
+        grid-template-columns: 250px minmax(0, 1fr);
+        gap: 15px;
+    }
+
+    .map-wrapper {
+        height: 480px;
+    }
+
+    .container {
+        padding: 30px 3%;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 650px) {
+    .navbar {
+        padding: 0 5%;
+        height: 60px;
+    }
+
+    .brand {
+        font-size: 17px;
+    }
+
+    .container {
+        padding: 25px 4%;
+    }
+
+    .page-header h1 {
+        font-size: 24px;
+    }
+
+    .content-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        order: 1;
+    }
+
+    .map-section {
+        order: 2;
+    }
+
+    .map-wrapper {
+        height: 400px;
+    }
+
+    .history-list {
+        max-height: 200px;
+    }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 380px) {
+    .online-status {
+        font-size: 11px;
+    }
+
+    .brand {
+        font-size: 15px;
+    }
+
+    .map-wrapper {
+        height: 320px;
+    }
+}

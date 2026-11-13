@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PH City Explorer</title>
+
+    <!-- Leaflet CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="brand">
+            <span class="brand-icon">📍</span>
+            <span>PH City Explorer</span>
+        </div>
+
+        <span class="online-status">
+            <span class="status-dot"></span>
+            Online
+        </span>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <header class="page-header">
+            <h1>Explore the Philippines</h1>
+            <p>Discover cities and places with ease.</p>
+        </header>
+
+        <!-- Main Layout -->
+        <div class="content-layout">
+
+            <!-- LEFT SIDEBAR -->
+            <aside class="sidebar">
+
+                <!-- Search Panel -->
+                <section class="search-card">
+
+                    <h2>Search Location</h2>
+                    <p class="card-description">
+                        Enter a city or location.
+                    </p>
+
+                    <form id="searchForm">
+
+                        <div class="search-box">
+                            <span class="search-icon">⌕</span>
+
+                            <input
+                                type="text"
+                                id="cityInput"
+                                placeholder="Enter city name..."
+                                autocomplete="off"
+                                required
+                            >
+                        </div>
+
+                        <button type="submit" class="search-button">
+                            Search Location
+                        </button>
+
+                    </form>
+
+                    <p id="status" class="status-message">
+                        Search for a city to begin.
+                    </p>
+
+                </section>
+
+                <!-- Search History -->
+                <section class="history-card">
+
+                    <div class="history-header">
+                        <h2>Recent Searches</h2>
+
+                        <button
+                            type="button"
+                            id="clearHistory"
+                            class="clear-button"
+                        >
+                            Clear
+                        </button>
+                    </div>
+
+                    <ul id="historyList" class="history-list">
+                        <li class="empty-history">
+                            No recent searches yet.
+                        </li>
+                    </ul>
+
+                </section>
+
+            </aside>
+
+            <!-- RIGHT MAP SECTION -->
+            <section class="map-section">
+
+                <div class="map-header">
+                    <div>
+                        <h2>Interactive Map</h2>
+                        <p>View your searched location here.</p>
+                    </div>
+
+                    <span class="map-label">MAP VIEW</span>
+                </div>
+
+                <div class="map-wrapper">
+                    <div id="map"></div>
+                </div>
+
+                <div class="map-footer">
+                    <span>📍</span>
+                    <p>Search a city to display its location on the map.</p>
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>City Locator.
+        </p>
+    </footer>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
